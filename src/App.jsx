@@ -1,7 +1,16 @@
-export default function App() {
+import React from 'react'
+import TodoList from './components/TodoList'
+import TodoInput from './components/TodoInput'
+
+const App = () => {
+  const greeting = 'hello world!'
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <>
+      <TodoInput/>
+      <TodoList/>
+    </>
+    
   )
 }
+
+export default App
