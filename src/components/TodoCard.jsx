@@ -8,7 +8,7 @@ const TodoCard = (props) => {
                 <p>{children}</p>
                 <div className='actionsContainer'>
                     <i className="fa-regular fa-pen-to-square"></i>
-                    <i class="fa-solid fa-trash"></i>
+                    <i onClick={console.log('click')} className="fa-solid fa-trash"></i>
                 </div>
             </li>
         </div>
