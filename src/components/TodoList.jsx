@@ -1,21 +1,25 @@
-import React from 'react'
-import TodoCard from './TodoCard'
+import React from 'react';
+import TodoCard from './TodoCard';
 
-const TodoList = ({todos}) => {
+const TodoList = ({ todos, handleDeleteTodos, handleEditTodos }) => { 
+  return (
+    <>
+      <ul className="main">
+        {todos.map((todo, index) => {
+          return (
+            <TodoCard
+              key={index}
+              index={index}
+              handleDeleteTodos={handleDeleteTodos} 
+              handleEditTodos={handleEditTodos} 
+            >
+              {todo}
+            </TodoCard>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
 
-    return (
-        <>
-            <ul className='main'>
-                {todos.map((todo,index) => { 
-                    return ( 
-                        <TodoCard key={index}>
-                            {todo}
-                        </TodoCard>
-                    )
-                })}
-            </ul>
-        </>
-    )
-}
-
-export default TodoList
+export default TodoList;
